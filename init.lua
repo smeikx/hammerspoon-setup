@@ -1,5 +1,6 @@
 require 'battery'
 require 'window'
+escape_app_toggle = require 'escape_app_toggle'
 mouse = require 'mouse'
 
 app_watcher = hs.application.watcher.new(
@@ -10,15 +11,4 @@ app_watcher = hs.application.watcher.new(
 	end)
 	:start()
 
-do
-	local last_app = hs.application.frontmostApplication()
-	local function toggle_alacritty()
-		if hs.application.frontmostApplication():name() == 'Alacritty' then
-			last_app:activate(false)
-		else
-			last_app = hs.application.frontmostApplication()
-			hs.application.launchOrFocus('Alacritty')
-		end
-	end
-	hs.hotkey.bind({'cmd'}, 'escape', nil, toggle_alacritty, nil, nil)
-end
+escape_app_toggle.init("Terminal")
