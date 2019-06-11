@@ -21,8 +21,8 @@ local buttons = {
 local mappings = {
 	Blender = {
 		middle = actions.void,
-		back = actions.cmd_z,
-		forwards = actions.shft_cmd_z },
+		back = actions.void,
+		forwards = actions.void },
 	Safari = {
 		middle = actions.mssn_cntrl,
 		back = actions.cmd_oe,
@@ -31,10 +31,6 @@ local mappings = {
 		middle = actions.mssn_cntrl,
 		back = actions.lft,
 		forwards = actions.rght },
-	TextEdit = {
-		middle = actions.mssn_cntrl,
-		back = actions.cmd_z,
-		forwards = actions.shft_cmd_z }
 }
 
 mappings.Kalender = mappings.Finder
@@ -42,19 +38,6 @@ mappings.Finder = mappings.iBooks
 mappings.Unity = mappings.Blender
 mappings.Godot = mappings.Blender
 mappings.godot = mappings.Godot
-mappings['Sublime Text'] = mappings.TextEdit
-mappings['iA Writer'] = mappings.TextEdit
-mappings.Typora = mappings.TextEdit
-mappings.Pages = mappings.TextEdit
-mappings.Numbers = mappings.TextEdit
-mappings.Keynote = mappings.TextEdit
-mappings.Keynote = mappings.TextEdit
-mappings.Keynote = mappings.TextEdit
-mappings['Affinity Designer'] = mappings.TextEdit
-mappings['Affinity Photo'] = mappings.TextEdit
-mappings['Affinity Publisher'] = mappings.TextEdit
-mappings['InDesign CC'] = mappings.TextEdit
-mappings['Illustrator CC'] = mappings.TextEdit
 
 local mouse_click_event = hs.eventtap.new(
 	{hs.eventtap.event.types.otherMouseDown},
