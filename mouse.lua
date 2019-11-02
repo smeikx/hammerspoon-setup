@@ -20,12 +20,10 @@ hs.eventtap.new({25}, -- otherMouseDown
 	function(event)
 		local button = event:getProperty(3)
 		if button == 2 then -- middleClick
-			--[[
 			if event:getProperty(1) == 2 then -- doubleClick
 				hs.application.launchOrFocus('Mission Control')
 				return true
 			end
-			]]--
 			return current_app == 'Terminal'
 		end
 		if event:getButtonState(button) then

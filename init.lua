@@ -1,6 +1,5 @@
 require 'battery'
 require 'window'
-require 'ctrl_double_press'
 
 escape_app_toggle = require 'escape_app_toggle'
 mouse = require 'mouse'
