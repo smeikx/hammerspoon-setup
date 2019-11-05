@@ -1,5 +1,6 @@
 require 'battery'
 require 'window'
+require 'vim_mode'
 
 escape_app_toggle = require 'escape_app_toggle'
 mouse = require 'mouse'
