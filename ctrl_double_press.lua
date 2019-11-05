@@ -7,9 +7,9 @@ local eventtap = hs.eventtap
 local events = eventtap.event.types
 
 
-timeFrame = 1 -- in seconds
+local timeFrame = 1 -- in seconds
 
-action = function() -- what to do
+local action = function() -- what to do
 	hs.application.launchOrFocus('Mission Control')
 end
 
